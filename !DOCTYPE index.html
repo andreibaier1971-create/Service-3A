@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service 3A – Ihre KFZ-Werkstatt</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #111;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            background: #e30613;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .hero {
+            background: url('preview.jpg') no-repeat center center/cover;
+            color: #e60000;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .btn {
+            background: #e30613;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            flex: 1 1 300px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        @media(max-width: 768px) {
+            .services {
+                flex-direction: column;
+            }
+            .hero h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Service 3A</h1>
+    <p>Ihre zuverlässige KFZ-Werkstatt</p>
+</header>
+
+<nav>
+    <a href="#leistungen">Leistungen</a>
+    <a href="#angebot">Eröffnung</a>
+    <a href="#kontakt">Kontakt</a>
+</nav>
+
+<section class="hero">
+    <h2>Große Neueröffnung!</h2>
+    <p>20% Rabatt auf alle Reparaturen wenn sie einen Freund bringen</p>
+    <a href="#kontakt" class="btn">Jetzt Termin sichern</a>
+</section>
+
+<section id="leistungen">
+    <h2>Unsere Leistungen</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Inspektion & Wartung</h3>
+            <p>Professionelle Fahrzeugwartung.</p>
+        </div>
+        <div class="card">
+            <h3>Reparaturen</h3>
+            <p>Schnelle und zuverlässige Reparaturen aller Marken.</p>
+        </div>
+        <div class="card">
+            <h3>Reifenservice</h3>
+            <p>Reifenwechsel, Einlagerung und Auswuchten.</p>
+        </div>
+    </div>
+</section>
+
+<section id="angebot">
+    <h2>Eröffnungs-Sonderangebot</h2>
+    <p><strong>Bringen sie einen Freund und erhalten eine 15% Rabatt</strong></p>
+    <p>Angebot gültig bis: [30.04.2026]</p>
+</section>
+
+<section id="termin">
+    <h2>Termin vereinbaren</h2>
+    <form>
+        <label>Ihr Name</label>
+        <input type="text" placeholder="Max Mustermann" required>
+
+        <label>E-Mail</label>
+        <input type="email" placeholder="beispiel@email.de" required>
+
+        <label>Telefonnummer</label>
+        <input type="tel" placeholder="0123 456789">
+
+        <label>Gewünschtes Datum</label>
+        <input type="date" required>
+
+        <label>Service auswählen</label>
+        <select required>
+            <option value="">Bitte auswählen</option>
+            <option>Inspektion</option>
+            <option>Reparatur</option>
+            <option>Reifenwechsel</option>
+            <option>Ölwechsel</option>
+        </select>
+
+        <label>Nachricht</label>
+        <textarea rows="4" placeholder="Weitere Informationen..."></textarea>
+
+        <button type="submit">Termin anfragen</button>
+    </form>
+</section>
+
+<section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>📍 Rudolf-Diesel-Straße 20, 76356 Weingarten</p>
+    <p>📞 +49 178 3367955; +49 176 80747641</p>
+    <p>📧 info@autoservice-mueller.de</p>
+</section>
+
+<footer>
+    <p>© 2026 Service 3A – Alle Rechte vorbehalten</p>
+</footer>
+
+</body>
+</html>
