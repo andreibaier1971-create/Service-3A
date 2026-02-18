@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service 3A – Ihre KFZ-Werkstatt</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background: #111;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background: #e30613;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .hero {
+            background: url('preview.jpg') no-repeat center center/cover;
+            position: relative;
+            text-align: center;
+            padding: 100px 20px;
+            color: white;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            background: #e30613;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background: #b30000;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            flex: 1 1 300px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background: #e30613;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #b30000;
+        }
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media(max-width: 768px) {
+            .services {
+                flex-direction: column;
+            }
+            .hero h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Service 3A</h1>
+    <p>Ihre zuverlässige KFZ-Werkstatt in Weingarten</p>
+</header>
+
+<nav>
+    <a href="#leistungen">Leistungen</a>
+    <a href="#angebot">Angebot</a>
+    <a href="#termin">Termin</a>
+    <a href="#kontakt">Kontakt</a>
+</nav>
+
+<section class="hero">
+    <div class="hero-content">
+        <h2>Große Neueröffnung!</h2>
+        <p>Bringen Sie einen Freund mit und erhalten Sie <strong>20 % Rabatt</strong> auf Ihre Reparatur.</p>
+        <a href="#termin" class="btn">Jetzt Termin sichern</a>
+    </div>
+</section>
+
+<section id="leistungen">
+    <h2>Unsere Leistungen</h2>
+    <div class="services">
+        <div class="card">
+            <h3>Inspektion & Wartung</h3>
+            <p>Professionelle Fahrzeugwartung nach Herstellervorgaben.</p>
+        </div>
+        <div class="card">
+            <h3>Reparaturen</h3>
+            <p>Schnelle und zuverlässige Reparaturen aller Marken.</p>
+        </div>
+        <div class="card">
+            <h3>Reifenservice</h3>
+            <p>Reifenwechsel und Einlagerung.</p>
+        </div>
+    </div>
+</section>
+
+<section id="angebot">
+    <h2>Eröffnungs-Sonderangebot</h2>
+    <p><strong>Freundschafts-Rabatt:</strong> Bringen Sie einen Freund mit und sichern Sie sich 15 % Rabatt.</p>
+    <p>Angebot gültig bis: 30.04.2026</p>
+</section>
+
+<section id="termin">
+    <h2>Termin vereinbaren</h2>
+
+<form action="https://formspree.io/f/mlgwlooj" method="POST">
+    <label>Ihr Name</label>
+    <input type="text" name="name" placeholder="Max Mustermann" required>
+
+    <label>E-Mail</label>
+    <input type="email" name="email" placeholder="beispiel@email.de" required>
+
+    <label>Telefonnummer</label>
+    <input type="tel" name="telefon">
+
+    <label>Gewünschtes Datum</label>
+    <input type="date" name="datum" required>
+
+    <label>Service auswählen</label>
+    <select name="service" required>
+        <option value="">Bitte auswählen</option>
+        <option>Inspektion</option>
+        <option>Reparatur</option>
+        <option>Reifenwechsel</option>
+        <option>Ölwechsel</option>
+    </select>
+
+    <label>Nachricht</label>
+    <textarea name="nachricht" rows="4"></textarea>
+
+    <button type="submit">Termin anfragen</button>
+</form>
+
+</section>
+
+<section id="kontakt">
+    <h2>Kontakt</h2>
+    <p>📍 Rudolf-Diesel-Straße 20, 76356 Weingarten</p>
+    <p>📞 +49 178 3367955 | +49 176 80747641</p>
+    <p>📧 service3A@mail.de</p>
+</section>
+
+<footer>
+    <p>© 2026 Service 3A – Alle Rechte vorbehalten</p>
+</footer>
+
+</body>
+</html>
